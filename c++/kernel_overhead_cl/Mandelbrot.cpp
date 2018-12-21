@@ -46,7 +46,7 @@ std::vector<std::vector<float> > mandelbrot(
     //Allocate GPU data 
     std::vector<cl::Buffer> output_gpu(num_zooms);
     for (int i = 0; i < num_zooms; ++i) {
-        output_gpu[i] = cl::Buffer(*OpenCLUtils::getContext(), CL_MEM_READ_WRITE, // change flag?
+        output_gpu[i] = cl::Buffer(*OpenCLUtils::getContext(), CL_MEM_READ_ONLY,
             nx*ny*sizeof(float), NULL, &error);
         CL_CHECK(error);
     }
@@ -137,6 +137,7 @@ std::vector<std::vector<float> > mandelbrot(
 
 
 int main(int argc, char* argv[]) {
+    return 0;
     const int n = 1024;
     const int nx = 3*n;
     const int ny = 2*n;
@@ -180,11 +181,7 @@ int main(int argc, char* argv[]) {
         filename << "mandelbrot_" << i << ".tga";
         std::cout << "Writing to " << filename.str() << std::endl;
         toTGA(result[i].data(), nx, ny, filename.str());
-        //CUDA_SAFE_CALL(cudaFreeHost(result[i]));
     }
-
-
-    //CUDA_SAFE_CALL(cudaDeviceReset());
 
     return 0;
 }
