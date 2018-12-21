@@ -51,12 +51,7 @@ std::vector<float*> mandelbrot(
     }
 
     //Create timing events
-    std::vector<cudaEvent_t> start_events(num_zooms);
-    std::vector<cudaEvent_t> stop_events(num_zooms);
-    for (int i = 0; i < num_zooms; ++i) {
-        CUDA_SAFE_CALL(cudaEventCreate(&start_events[i]));
-        CUDA_SAFE_CALL(cudaEventCreate(&stop_events[i]));
-    }
+    std::vector<cl::Event> events(num_zooms);
 
     //Run kernel and generate images
     cl::Kernel *kernel = OpenCLUtils::getKernel("Mandelbrot");
@@ -74,14 +69,10 @@ std::vector<float*> mandelbrot(
         kernel->setArg<float>(9, dy[i]);
 
         // execute kernel
-        cl::Event event;
         CL_CHECK(OpenCLUtils::getQueue()->enqueueNDRangeKernel(
                  *kernel, cl::NullRange, 
                  cl::NDRange((nx + block_width - 1), (ny + block_height - 1)), 
-                 cl::NDRange(block_width, block_height), 0, &event));
-        CL_CHECK(event.wait());
-        if (profInfo)
-            profInfo->time_computeEta = OpenCLUtils::elapsedMilliseconds(event);
+                 cl::NDRange(block_width, block_height), 0, &event[i]));
     }
     double enqueue_compute_end = getCurrentTime();
 
@@ -89,9 +80,9 @@ std::vector<float*> mandelbrot(
     double sync_compute_start = getCurrentTime();
     double gpu_time_compute = 0.0;
     for (int i = 0; i < num_zooms; ++i) {
-        CUDA_SAFE_CALL(cudaEventSynchronize(stop_events[i]));
+        CL_CHECK(event[i].wait());
         float milliseconds = 0;
-        CUDA_SAFE_CALL(cudaEventElapsedTime(&milliseconds, start_events[i], stop_events[i]));
+        CL_CHECK(OpenCLUtils::elapsedMilliseconds(event[i]));
         std::cout << "Iteration " << i << " took " << milliseconds << " ms" << std::endl;
         gpu_time_compute += milliseconds;
     }
@@ -111,9 +102,7 @@ std::vector<float*> mandelbrot(
     //Download from GPU to CPU
     double enqueue_dl_start = getCurrentTime();
     for (int i = 0; i < num_zooms; ++i) {
-        CUDA_SAFE_CALL(cudaEventRecord(start_events[i]));
-        CL_CHECK(OpenCLUtils::getQueue()->enqueueReadBuffer(output_gpu[i], CL_TRUE, 0, sizeof(float) * nx * ny, &retval[i][0], 0, 0));
-        CUDA_SAFE_CALL(cudaEventRecord(stop_events[i]));
+        CL_CHECK(OpenCLUtils::getQueue()->enqueueReadBuffer(output_gpu[i], CL_TRUE, 0, sizeof(float) * nx * ny, &retval[i][0], 0, &event[i]));
     }
     double enqueue_dl_end = getCurrentTime();
 
@@ -121,9 +110,9 @@ std::vector<float*> mandelbrot(
     double sync_dl_start = getCurrentTime();
     double gpu_time_dl = 0.0;
     for (int i = 0; i < num_zooms; ++i) {
-        CUDA_SAFE_CALL(cudaEventSynchronize(stop_events[i]));
+        CL_CHECK(event[i].wait());
         float milliseconds = 0;
-        CUDA_SAFE_CALL(cudaEventElapsedTime(&milliseconds, start_events[i], stop_events[i]));
+        CL_CHECK(OpenCLUtils::elapsedMilliseconds(event[i]));
         std::cout << "Iteration " << i << " took " << milliseconds << " ms" << std::endl;
         gpu_time_dl += milliseconds;
     }
