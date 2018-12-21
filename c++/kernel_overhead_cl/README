@@ -1,0 +1,8 @@
+Config:
+export KERNELDIR=.
+
+Compile:
+g++ Mandelbrot.cpp TGA.cpp oclutils.cpp -lOpenCL -std=c++11 -o mandelbrot
+
+Run:
+./mandelbrot
