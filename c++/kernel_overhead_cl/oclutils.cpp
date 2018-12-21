@@ -73,12 +73,8 @@ cl_ulong OpenCLUtils::getDeviceLocalMemSize()
 
 float OpenCLUtils::elapsedMilliseconds(const cl::Event &event)
 {
-#ifdef PROFILE
     return (event.getProfilingInfo<CL_PROFILING_COMMAND_END>()
             - event.getProfilingInfo<CL_PROFILING_COMMAND_START>()) * .000001; // note: _START and _END values are both in nanoseconds
-#else
-    return -1;
-#endif
 }
 
 static void errorCallback(const char *errInfo, const void *privateInfo, size_t cb, void *userData)

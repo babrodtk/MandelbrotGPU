@@ -46,7 +46,7 @@ std::vector<std::vector<float> > mandelbrot(
     //Allocate GPU data 
     std::vector<cl::Buffer> output_gpu(num_zooms);
     for (int i = 0; i < num_zooms; ++i) {
-        output_gpu[i] = cl::Buffer(*OpenCLUtils::getContext(), CL_MEM_READ_ONLY,
+        output_gpu[i] = cl::Buffer(*OpenCLUtils::getContext(), CL_MEM_READ_WRITE,
             nx*ny*sizeof(float), NULL, &error);
         CL_CHECK(error);
     }
@@ -55,24 +55,24 @@ std::vector<std::vector<float> > mandelbrot(
     std::vector<cl::Event> events(num_zooms);
 
     //Run kernel and generate images
-    cl::Kernel *kernel = OpenCLUtils::getKernel("Mandelbrot");
+    cl::Kernel *kernel = OpenCLUtils::getKernel("mandelbrotKernel");
     double enqueue_compute_start = getCurrentTime();
 
     for (int i = 0; i < num_zooms; ++i) {
-        kernel->setArg<cl::Buffer>(1, output_gpu[i]);
-        kernel->setArg<int>(2, nx*sizeof(float));
-        kernel->setArg<unsigned int>(3, nx);
-        kernel->setArg<unsigned int>(4, ny);
-        kernel->setArg<unsigned int>(5, iterations);
-        kernel->setArg<float>(6, x0[i]);
-        kernel->setArg<float>(7, y0[i]);
-        kernel->setArg<float>(8, dx[i]);
-        kernel->setArg<float>(9, dy[i]);
+        kernel->setArg<cl::Buffer>(0, output_gpu[i]);
+        kernel->setArg<unsigned int>(1, (unsigned int) (nx*sizeof(float)));
+        kernel->setArg<unsigned int>(2, nx);
+        kernel->setArg<unsigned int>(3, ny);
+        kernel->setArg<unsigned int>(4, iterations);
+        kernel->setArg<float>(5, x0[i]);
+        kernel->setArg<float>(6, y0[i]);
+        kernel->setArg<float>(7, dx[i]);
+        kernel->setArg<float>(8, dy[i]);
 
         // execute kernel
         CL_CHECK(OpenCLUtils::getQueue()->enqueueNDRangeKernel(
                  *kernel, cl::NullRange, 
-                 cl::NDRange((nx + block_width - 1), (ny + block_height - 1)), 
+                 cl::NDRange(((nx + block_width - 1)/block_width)*block_width, ((ny + block_height - 1)/block_height)*block_height), 
                  cl::NDRange(block_width, block_height), 0, &events[i]));
     }
     double enqueue_compute_end = getCurrentTime();
@@ -103,7 +103,7 @@ std::vector<std::vector<float> > mandelbrot(
     //Download from GPU to CPU
     double enqueue_dl_start = getCurrentTime();
     for (int i = 0; i < num_zooms; ++i) {
-        CL_CHECK(OpenCLUtils::getQueue()->enqueueReadBuffer(output_gpu[i], CL_TRUE, 0, sizeof(float) * nx * ny, &retval[i][0], 0, &events[i]));
+        CL_CHECK(OpenCLUtils::getQueue()->enqueueReadBuffer(output_gpu[i], CL_TRUE, 0, sizeof(float) * nx * ny, retval[i].data(), 0, &events[i]));
     }
     double enqueue_dl_end = getCurrentTime();
 
@@ -137,7 +137,6 @@ std::vector<std::vector<float> > mandelbrot(
 
 
 int main(int argc, char* argv[]) {
-    return 0;
     const int n = 1024;
     const int nx = 3*n;
     const int ny = 2*n;
@@ -169,7 +168,7 @@ int main(int argc, char* argv[]) {
 
     // init OpenCL
     std::vector<std::pair<std::string, std::string> > sources;
-    sources.push_back(std::make_pair("Mandelbrot", "Mandelbrot.cl"));
+    sources.push_back(std::make_pair("mandelbrotKernel", "Mandelbrot.cl"));
     OpenCLUtils::init(
                 sources, CL_DEVICE_TYPE_GPU,
                 (boost::format("-I %s") % ".").str());
