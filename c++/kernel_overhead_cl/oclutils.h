@@ -13,13 +13,11 @@
  */
 #define CL_HPP_ENABLE_PROGRAM_CONSTRUCTION_FROM_ARRAY_COMPATIBILITY
 
-#include "config.h"
-
-#if OPENCL_VERSION_MAJOR == 2
+//#if OPENCL_VERSION_MAJOR == 2 // CMAKE VARIABLE
 #include <CL/cl2.hpp>
-#else
-#include <CL/cl.hpp>
-#endif
+//#else
+//#include <CL/cl.hpp>
+//#endif
 
 #include <cstdio>
 #include <vector>

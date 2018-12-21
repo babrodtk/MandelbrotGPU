@@ -3,6 +3,7 @@
 #include <sstream>
 #include <vector>
 #include <cassert>
+#include <boost/format.hpp>
 
 #ifdef _WIN32
 #include <sys/timeb.h>
@@ -30,12 +31,12 @@ inline double getCurrentTime() {
 #endif
 };
 
-std::vector<float*> mandelbrot(
-    cl_int error = CL_SUCCESS;
+std::vector<std::vector<float> > mandelbrot(
     unsigned int nx, unsigned int ny, unsigned int iterations,
     std::vector<float> x0, std::vector<float> y0,
     std::vector<float> dx, std::vector<float> dy,
     size_t block_width = 8, size_t block_height = 8) {
+    cl_int error = CL_SUCCESS;
     int num_zooms = x0.size();
     assert(num_zooms == x0.size());
     assert(num_zooms == y0.size());
@@ -72,7 +73,7 @@ std::vector<float*> mandelbrot(
         CL_CHECK(OpenCLUtils::getQueue()->enqueueNDRangeKernel(
                  *kernel, cl::NullRange, 
                  cl::NDRange((nx + block_width - 1), (ny + block_height - 1)), 
-                 cl::NDRange(block_width, block_height), 0, &event[i]));
+                 cl::NDRange(block_width, block_height), 0, &events[i]));
     }
     double enqueue_compute_end = getCurrentTime();
 
@@ -80,9 +81,9 @@ std::vector<float*> mandelbrot(
     double sync_compute_start = getCurrentTime();
     double gpu_time_compute = 0.0;
     for (int i = 0; i < num_zooms; ++i) {
-        CL_CHECK(event[i].wait());
+        CL_CHECK(events[i].wait());
         float milliseconds = 0;
-        CL_CHECK(OpenCLUtils::elapsedMilliseconds(event[i]));
+        CL_CHECK(OpenCLUtils::elapsedMilliseconds(events[i]));
         std::cout << "Iteration " << i << " took " << milliseconds << " ms" << std::endl;
         gpu_time_compute += milliseconds;
     }
@@ -94,15 +95,15 @@ std::vector<float*> mandelbrot(
     std::cout << "GPU time: " << gpu_time_compute * 1.0e-3 << " s" << std::endl;
 
     //Allocate CPU data 
-    std::vector<float*> retval(num_zooms);
+    std::vector<std::vector<float> > retval(num_zooms);
     for (int i = 0; i < num_zooms; ++i) {
-        &retval[i] = new std::vector<float>(nx * ny);
+        retval[i].resize(nx * ny);
     }
 
     //Download from GPU to CPU
     double enqueue_dl_start = getCurrentTime();
     for (int i = 0; i < num_zooms; ++i) {
-        CL_CHECK(OpenCLUtils::getQueue()->enqueueReadBuffer(output_gpu[i], CL_TRUE, 0, sizeof(float) * nx * ny, &retval[i][0], 0, &event[i]));
+        CL_CHECK(OpenCLUtils::getQueue()->enqueueReadBuffer(output_gpu[i], CL_TRUE, 0, sizeof(float) * nx * ny, &retval[i][0], 0, &events[i]));
     }
     double enqueue_dl_end = getCurrentTime();
 
@@ -110,9 +111,9 @@ std::vector<float*> mandelbrot(
     double sync_dl_start = getCurrentTime();
     double gpu_time_dl = 0.0;
     for (int i = 0; i < num_zooms; ++i) {
-        CL_CHECK(event[i].wait());
+        CL_CHECK(events[i].wait());
         float milliseconds = 0;
-        CL_CHECK(OpenCLUtils::elapsedMilliseconds(event[i]));
+        CL_CHECK(OpenCLUtils::elapsedMilliseconds(events[i]));
         std::cout << "Iteration " << i << " took " << milliseconds << " ms" << std::endl;
         gpu_time_dl += milliseconds;
     }
@@ -166,19 +167,19 @@ int main(int argc, char* argv[]) {
     }
 
     // init OpenCL
-    vector<pair<string, string> > sources;
-    sources.push_back(make_pair("Mandelbrot", "Mandelbrot.cl"));
+    std::vector<std::pair<std::string, std::string> > sources;
+    sources.push_back(std::make_pair("Mandelbrot", "Mandelbrot.cl"));
     OpenCLUtils::init(
-                sources, options()->cpu() ? CL_DEVICE_TYPE_CPU : CL_DEVICE_TYPE_GPU,
-                (boost::format("-I %s") % ".");
+                sources, CL_DEVICE_TYPE_GPU,
+                (boost::format("-I %s") % ".").str());
 
-    std::vector<float*> result = mandelbrot(nx, ny, iterations, x0, y0, dx, dy);
+    std::vector<std::vector<float> > result = mandelbrot(nx, ny, iterations, x0, y0, dx, dy);
 
     for (int i = 0; i < result.size(); ++i) {
         std::stringstream filename;
         filename << "mandelbrot_" << i << ".tga";
         std::cout << "Writing to " << filename.str() << std::endl;
-        toTGA(result[i], nx, ny, filename.str());
+        toTGA(result[i].data(), nx, ny, filename.str());
         //CUDA_SAFE_CALL(cudaFreeHost(result[i]));
     }
 
