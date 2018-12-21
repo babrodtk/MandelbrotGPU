@@ -83,7 +83,7 @@ std::vector<std::vector<float> > mandelbrot(
     for (int i = 0; i < num_zooms; ++i) {
         CL_CHECK(events[i].wait());
         float milliseconds = 0;
-        CL_CHECK(OpenCLUtils::elapsedMilliseconds(events[i]));
+        milliseconds = OpenCLUtils::elapsedMilliseconds(events[i]);
         std::cout << "Iteration " << i << " took " << milliseconds << " ms" << std::endl;
         gpu_time_compute += milliseconds;
     }
@@ -113,7 +113,7 @@ std::vector<std::vector<float> > mandelbrot(
     for (int i = 0; i < num_zooms; ++i) {
         CL_CHECK(events[i].wait());
         float milliseconds = 0;
-        CL_CHECK(OpenCLUtils::elapsedMilliseconds(events[i]));
+        milliseconds = OpenCLUtils::elapsedMilliseconds(events[i]);
         std::cout << "Iteration " << i << " took " << milliseconds << " ms" << std::endl;
         gpu_time_dl += milliseconds;
     }
@@ -140,7 +140,7 @@ int main(int argc, char* argv[]) {
     const int n = 1024;
     const int nx = 3*n;
     const int ny = 2*n;
-    const int iterations = 1;
+    const int iterations = 1000;
 
     //Set zoom parameters
     const double x_center = -0.75 + 0.0025;
