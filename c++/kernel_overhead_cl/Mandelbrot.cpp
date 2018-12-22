@@ -210,6 +210,8 @@ std::vector<std::vector<float> > mandelbrot(
     std::cout << "Download:         " << (gpu_time_dl / num_zooms) << " ms" << std::endl;
     std::cout << "========" << std::endl;
 
+    delete queue;
+
     return retval;
 }
 
@@ -273,6 +275,8 @@ int main(int argc, char* argv[]) {
         std::cout << "Writing to " << filename.str() << std::endl;
         toTGA(result[i].data(), nx, ny, filename.str());
     }
+
+    delete context;
 
     return 0;
 }
