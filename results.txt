@@ -9,42 +9,162 @@ PYTHON - OPENCL
 2.095012 x 1.396675
 1.990261 x 1.326841
 1.890748 x 1.260499
-Iteration 0 took 164.620576 ms
-Iteration 1 took 179.861248 ms
-Iteration 2 took 197.684064 ms
-Iteration 3 took 216.941280 ms
-Iteration 4 took 238.523872 ms
-Iteration 5 took 261.850944 ms
-Iteration 6 took 284.008768 ms
-Iteration 7 took 299.410912 ms
-Iteration 8 took 310.595008 ms
-Iteration 9 took 321.855936 ms
+1.796211 x 1.197474
+1.706400 x 1.137600
+1.621080 x 1.080720
+1.540026 x 1.026684
+1.463025 x 0.975350
+1.389874 x 0.926582
+1.320380 x 0.880253
+1.254361 x 0.836241
+1.191643 x 0.794429
+1.132061 x 0.754707
+1.075458 x 0.716972
+1.021685 x 0.681123
+0.970601 x 0.647067
+0.922071 x 0.614714
+0.875967 x 0.583978
+0.832169 x 0.554779
+0.790560 x 0.527040
+0.751032 x 0.500688
+0.713481 x 0.475654
+0.677807 x 0.451871
+0.643916 x 0.429278
+0.611721 x 0.407814
+0.581134 x 0.387423
+0.552078 x 0.368052
+0.524474 x 0.349649
+0.498250 x 0.332167
+0.473338 x 0.315558
+0.449671 x 0.299781
+0.427187 x 0.284792
+0.405828 x 0.270552
+0.385537 x 0.257024
+0.366260 x 0.244173
+0.347947 x 0.231964
+0.330549 x 0.220366
+0.314022 x 0.209348
+0.298321 x 0.198881
+0.283405 x 0.188937
+0.269235 x 0.179490
+0.255773 x 0.170515
+0.242984 x 0.161989
+Iteration 0 took 164.835968 ms
+Iteration 1 took 179.872032 ms
+Iteration 2 took 197.645376 ms
+Iteration 3 took 216.938720 ms
+Iteration 4 took 238.548992 ms
+Iteration 5 took 265.618304 ms
+Iteration 6 took 289.583936 ms
+Iteration 7 took 305.743648 ms
+Iteration 8 took 317.314464 ms
+Iteration 9 took 327.601024 ms
+Iteration 10 took 339.389536 ms
+Iteration 11 took 350.813824 ms
+Iteration 12 took 362.468736 ms
+Iteration 13 took 374.382432 ms
+Iteration 14 took 384.550752 ms
+Iteration 15 took 396.714400 ms
+Iteration 16 took 408.938080 ms
+Iteration 17 took 422.536544 ms
+Iteration 18 took 436.786336 ms
+Iteration 19 took 450.111552 ms
+Iteration 20 took 464.035200 ms
+Iteration 21 took 472.316608 ms
+Iteration 22 took 484.541184 ms
+Iteration 23 took 493.417632 ms
+Iteration 24 took 509.424672 ms
+Iteration 25 took 509.601408 ms
+Iteration 26 took 510.721696 ms
+Iteration 27 took 514.126688 ms
+Iteration 28 took 517.560640 ms
+Iteration 29 took 521.511680 ms
+Iteration 30 took 525.640544 ms
+Iteration 31 took 529.214528 ms
+Iteration 32 took 533.164000 ms
+Iteration 33 took 535.839136 ms
+Iteration 34 took 537.515584 ms
+Iteration 35 took 539.097152 ms
+Iteration 36 took 540.976896 ms
+Iteration 37 took 554.120896 ms
+Iteration 38 took 545.969024 ms
+Iteration 39 took 543.187616 ms
+Iteration 40 took 543.235008 ms
+Iteration 41 took 542.938752 ms
+Iteration 42 took 542.324544 ms
+Iteration 43 took 542.020032 ms
+Iteration 44 took 540.910912 ms
+Iteration 45 took 539.390816 ms
+Iteration 46 took 538.323168 ms
+Iteration 47 took 537.079744 ms
+Iteration 48 took 535.331136 ms
+Iteration 49 took 532.867936 ms
 Compute
-Enqueue:  0.006315 s
-Sync:     2.472781 s
-CPU time: 2.479096 s
-GPU time: 2.475353 s
-Iteration 0 took 6.064800 ms
-Iteration 1 took 5.113920 ms
-Iteration 2 took 10.468704 ms
-Iteration 3 took 10.502624 ms
-Iteration 4 took 10.278656 ms
-Iteration 5 took 10.006688 ms
-Iteration 6 took 9.589024 ms
-Iteration 7 took 9.672192 ms
-Iteration 8 took 9.352096 ms
-Iteration 9 took 9.287840 ms
+Enqueue:  0.018843 s
+Sync:     22.200057 s
+CPU time: 22.218900 s
+GPU time: 22.206799 s
+Iteration 0 took 5.236320 ms
+Iteration 1 took 5.136544 ms
+Iteration 2 took 10.611808 ms
+Iteration 3 took 10.551680 ms
+Iteration 4 took 10.179008 ms
+Iteration 5 took 9.922656 ms
+Iteration 6 took 9.647904 ms
+Iteration 7 took 9.737440 ms
+Iteration 8 took 9.424448 ms
+Iteration 9 took 8.260832 ms
+Iteration 10 took 8.031520 ms
+Iteration 11 took 8.187456 ms
+Iteration 12 took 8.353248 ms
+Iteration 13 took 7.559584 ms
+Iteration 14 took 8.178880 ms
+Iteration 15 took 8.251520 ms
+Iteration 16 took 8.662304 ms
+Iteration 17 took 8.068352 ms
+Iteration 18 took 8.449504 ms
+Iteration 19 took 8.192576 ms
+Iteration 20 took 8.426720 ms
+Iteration 21 took 7.764736 ms
+Iteration 22 took 8.232288 ms
+Iteration 23 took 7.833504 ms
+Iteration 24 took 8.804256 ms
+Iteration 25 took 8.425120 ms
+Iteration 26 took 8.326304 ms
+Iteration 27 took 8.966208 ms
+Iteration 28 took 9.569088 ms
+Iteration 29 took 8.995328 ms
+Iteration 30 took 9.140832 ms
+Iteration 31 took 9.178656 ms
+Iteration 32 took 9.170688 ms
+Iteration 33 took 9.168384 ms
+Iteration 34 took 9.117952 ms
+Iteration 35 took 9.208032 ms
+Iteration 36 took 9.129792 ms
+Iteration 37 took 9.055424 ms
+Iteration 38 took 9.015520 ms
+Iteration 39 took 9.130368 ms
+Iteration 40 took 9.239392 ms
+Iteration 41 took 9.426304 ms
+Iteration 42 took 9.446976 ms
+Iteration 43 took 9.467264 ms
+Iteration 44 took 8.856224 ms
+Iteration 45 took 9.107552 ms
+Iteration 46 took 9.089216 ms
+Iteration 47 took 9.327008 ms
+Iteration 48 took 9.178144 ms
+Iteration 49 took 9.077888 ms
 Download
-Enqueue:  0.071430 s
-Sync:     0.026221 s
-CPU time: 0.097651 s
-GPU time: 0.090337 s
+Enqueue:  0.443630 s
+Sync:     0.025677 s
+CPU time: 0.469307 s
+GPU time: 0.439519 s
 ========
 Averages
-Enqueue compute:  0.631475 ms
-Enqueue download: 7.142997 ms
-Kernel:           247.535261 ms
-Download:         9.033654 ms
+Enqueue compute:  0.376859 ms
+Enqueue download: 8.872604 ms
+Kernel:           444.135990 ms
+Download:         8.790375 ms
 ========
 
 
@@ -64,43 +184,166 @@ PYTHON - CUDA
 2.095012 x 1.396675
 1.990261 x 1.326841
 1.890748 x 1.260499
-Iteration 0 took 177.605148 ms
-Iteration 1 took 194.221085 ms
-Iteration 2 took 214.678299 ms
-Iteration 3 took 233.987900 ms
-Iteration 4 took 256.780548 ms
-Iteration 5 took 282.288177 ms
-Iteration 6 took 305.903229 ms
-Iteration 7 took 323.016907 ms
-Iteration 8 took 336.177704 ms
-Iteration 9 took 345.941315 ms
+1.796211 x 1.197474
+1.706400 x 1.137600
+1.621080 x 1.080720
+1.540026 x 1.026684
+1.463025 x 0.975350
+1.389874 x 0.926582
+1.320380 x 0.880253
+1.254361 x 0.836241
+1.191643 x 0.794429
+1.132061 x 0.754707
+1.075458 x 0.716972
+1.021685 x 0.681123
+0.970601 x 0.647067
+0.922071 x 0.614714
+0.875967 x 0.583978
+0.832169 x 0.554779
+0.790560 x 0.527040
+0.751032 x 0.500688
+0.713481 x 0.475654
+0.677807 x 0.451871
+0.643916 x 0.429278
+0.611721 x 0.407814
+0.581134 x 0.387423
+0.552078 x 0.368052
+0.524474 x 0.349649
+0.498250 x 0.332167
+0.473338 x 0.315558
+0.449671 x 0.299781
+0.427187 x 0.284792
+0.405828 x 0.270552
+0.385537 x 0.257024
+0.366260 x 0.244173
+0.347947 x 0.231964
+0.330549 x 0.220366
+0.314022 x 0.209348
+0.298321 x 0.198881
+0.283405 x 0.188937
+0.269235 x 0.179490
+0.255773 x 0.170515
+0.242984 x 0.161989
+Iteration 0 took 175.515549 ms
+Iteration 1 took 185.740601 ms
+Iteration 2 took 204.271744 ms
+Iteration 3 took 236.433594 ms
+Iteration 4 took 257.829224 ms
+Iteration 5 took 281.949921 ms
+Iteration 6 took 306.502106 ms
+Iteration 7 took 325.145447 ms
+Iteration 8 took 334.288818 ms
+Iteration 9 took 345.450867 ms
+Iteration 10 took 361.493561 ms
+Iteration 11 took 374.672119 ms
+Iteration 12 took 384.951355 ms
+Iteration 13 took 398.976898 ms
+Iteration 14 took 408.164093 ms
+Iteration 15 took 419.642456 ms
+Iteration 16 took 435.354034 ms
+Iteration 17 took 428.325012 ms
+Iteration 18 took 441.277924 ms
+Iteration 19 took 455.268677 ms
+Iteration 20 took 469.574585 ms
+Iteration 21 took 483.416290 ms
+Iteration 22 took 520.946411 ms
+Iteration 23 took 532.552734 ms
+Iteration 24 took 542.298706 ms
+Iteration 25 took 546.928040 ms
+Iteration 26 took 553.351135 ms
+Iteration 27 took 554.234070 ms
+Iteration 28 took 560.303162 ms
+Iteration 29 took 566.265320 ms
+Iteration 30 took 576.269043 ms
+Iteration 31 took 580.302124 ms
+Iteration 32 took 586.184204 ms
+Iteration 33 took 590.463257 ms
+Iteration 34 took 592.240173 ms
+Iteration 35 took 593.753784 ms
+Iteration 36 took 594.452209 ms
+Iteration 37 took 597.013367 ms
+Iteration 38 took 593.786499 ms
+Iteration 39 took 595.660461 ms
+Iteration 40 took 594.813477 ms
+Iteration 41 took 594.276245 ms
+Iteration 42 took 592.855164 ms
+Iteration 43 took 592.321655 ms
+Iteration 44 took 591.579163 ms
+Iteration 45 took 588.922424 ms
+Iteration 46 took 585.817993 ms
+Iteration 47 took 584.520264 ms
+Iteration 48 took 581.725159 ms
+Iteration 49 took 579.391541 ms
 Compute
-Enqueue:  0.000389 s
-Sync:     2.670456 s
-CPU time: 2.670846 s
-GPU time: 2.670600 s
-Iteration 0 took 4.229504 ms
-Iteration 1 took 3.894496 ms
-Iteration 2 took 3.899104 ms
-Iteration 3 took 3.900064 ms
-Iteration 4 took 3.899648 ms
-Iteration 5 took 3.915136 ms
-Iteration 6 took 3.939648 ms
-Iteration 7 took 3.895680 ms
-Iteration 8 took 3.902560 ms
-Iteration 9 took 3.906368 ms
+Enqueue:  0.000932 s
+Sync:     23.877149 s
+CPU time: 23.878081 s
+GPU time: 23.877473 s
+Iteration 0 took 4.173120 ms
+Iteration 1 took 3.904896 ms
+Iteration 2 took 3.902336 ms
+Iteration 3 took 3.910176 ms
+Iteration 4 took 3.919808 ms
+Iteration 5 took 3.910208 ms
+Iteration 6 took 3.944256 ms
+Iteration 7 took 3.935232 ms
+Iteration 8 took 3.909952 ms
+Iteration 9 took 3.915008 ms
+Iteration 10 took 3.913024 ms
+Iteration 11 took 3.933280 ms
+Iteration 12 took 3.905472 ms
+Iteration 13 took 3.925568 ms
+Iteration 14 took 3.904992 ms
+Iteration 15 took 3.912800 ms
+Iteration 16 took 3.910592 ms
+Iteration 17 took 3.913344 ms
+Iteration 18 took 3.950688 ms
+Iteration 19 took 3.931648 ms
+Iteration 20 took 3.928832 ms
+Iteration 21 took 3.924736 ms
+Iteration 22 took 3.912768 ms
+Iteration 23 took 3.943936 ms
+Iteration 24 took 3.925760 ms
+Iteration 25 took 3.970752 ms
+Iteration 26 took 3.951712 ms
+Iteration 27 took 3.947872 ms
+Iteration 28 took 3.921696 ms
+Iteration 29 took 4.032416 ms
+Iteration 30 took 4.060256 ms
+Iteration 31 took 3.947392 ms
+Iteration 32 took 3.914368 ms
+Iteration 33 took 3.977600 ms
+Iteration 34 took 4.040640 ms
+Iteration 35 took 4.045248 ms
+Iteration 36 took 4.011808 ms
+Iteration 37 took 4.001280 ms
+Iteration 38 took 3.998304 ms
+Iteration 39 took 3.990624 ms
+Iteration 40 took 4.047968 ms
+Iteration 41 took 4.017728 ms
+Iteration 42 took 4.063488 ms
+Iteration 43 took 4.116896 ms
+Iteration 44 took 4.142336 ms
+Iteration 45 took 4.117952 ms
+Iteration 46 took 4.080544 ms
+Iteration 47 took 4.101088 ms
+Iteration 48 took 4.065952 ms
+Iteration 49 took 3.934912 ms
 Download
-Enqueue:  0.000830 s
-Sync:     0.038877 s
-CPU time: 0.039707 s
-GPU time: 0.039382 s
+Enqueue:  0.002617 s
+Sync:     0.197390 s
+CPU time: 0.200007 s
+GPU time: 0.198763 s
 ========
 Averages
-Enqueue compute:  0.038934 ms
-Enqueue download: 0.083017 ms
-Kernel:           267.060031 ms
-Download:         3.938221 ms
+Enqueue compute:  0.018630 ms
+Enqueue download: 0.052342 ms
+Kernel:           477.549453 ms
+Download:         3.975265 ms
 ========
+
+
+
 
 
 
@@ -109,51 +352,171 @@ Download:         3.938221 ms
 
 C++ - OPENCL
 
-0x0
-0x0
-0x0
-0x0
-0x0
-0x0
-0x0
-0x0
-0x0
-Iteration 0 took 164.693 ms
-Iteration 1 took 610.196 ms
-Iteration 2 took 609.961 ms
-Iteration 3 took 608.671 ms
-Iteration 4 took 607.809 ms
-Iteration 5 took 607.797 ms
-Iteration 6 took 607.753 ms
-Iteration 7 took 607.774 ms
-Iteration 8 took 607.82 ms
-Iteration 9 took 607.852 ms
+2.85x1.9
+2.7075x1.805
+2.57212x1.71475
+2.44352x1.62901
+2.32134x1.54756
+2.20528x1.47018
+2.09501x1.39667
+1.99026x1.32684
+1.89075x1.2605
+1.79621x1.19747
+1.7064x1.1376
+1.62108x1.08072
+1.54003x1.02668
+1.46302x0.97535
+1.38987x0.926582
+1.32038x0.880253
+1.25436x0.836241
+1.19164x0.794429
+1.13206x0.754707
+1.07546x0.716972
+1.02168x0.681123
+0.970601x0.647067
+0.92207x0.614714
+0.875967x0.583978
+0.832169x0.554779
+0.79056x0.52704
+0.751032x0.500688
+0.713481x0.475654
+0.677807x0.451871
+0.643916x0.429278
+0.61172x0.407814
+0.581134x0.387423
+0.552078x0.368052
+0.524474x0.349649
+0.49825x0.332167
+0.473338x0.315558
+0.449671x0.299781
+0.427187x0.284792
+0.405828x0.270552
+0.385537x0.257024
+0.36626x0.244173
+0.347947x0.231964
+0.330549x0.220366
+0.314022x0.209348
+0.298321x0.198881
+0.283405x0.188937
+0.269235x0.17949
+0.255773x0.170515
+0.242984x0.161989
+Iteration 0 took 164.817 ms
+Iteration 1 took 179.911 ms
+Iteration 2 took 197.66 ms
+Iteration 3 took 216.978 ms
+Iteration 4 took 238.5 ms
+Iteration 5 took 261.876 ms
+Iteration 6 took 283.97 ms
+Iteration 7 took 299.43 ms
+Iteration 8 took 310.555 ms
+Iteration 9 took 321.873 ms
+Iteration 10 took 333.715 ms
+Iteration 11 took 345.657 ms
+Iteration 12 took 357.887 ms
+Iteration 13 took 368.745 ms
+Iteration 14 took 379.85 ms
+Iteration 15 took 391.405 ms
+Iteration 16 took 403.554 ms
+Iteration 17 took 417.075 ms
+Iteration 18 took 431.019 ms
+Iteration 19 took 450.225 ms
+Iteration 20 took 458.975 ms
+Iteration 21 took 472.372 ms
+Iteration 22 took 484.567 ms
+Iteration 23 took 493.322 ms
+Iteration 24 took 500.996 ms
+Iteration 25 took 506.732 ms
+Iteration 26 took 510.8 ms
+Iteration 27 took 514.141 ms
+Iteration 28 took 517.619 ms
+Iteration 29 took 521.564 ms
+Iteration 30 took 525.656 ms
+Iteration 31 took 529.38 ms
+Iteration 32 took 533.204 ms
+Iteration 33 took 547.575 ms
+Iteration 34 took 541.669 ms
+Iteration 35 took 552.081 ms
+Iteration 36 took 553.978 ms
+Iteration 37 took 555.709 ms
+Iteration 38 took 555.814 ms
+Iteration 39 took 555.132 ms
+Iteration 40 took 554.365 ms
+Iteration 41 took 554.02 ms
+Iteration 42 took 553.07 ms
+Iteration 43 took 552.777 ms
+Iteration 44 took 551.527 ms
+Iteration 45 took 549.854 ms
+Iteration 46 took 548.563 ms
+Iteration 47 took 546.923 ms
+Iteration 48 took 545.278 ms
+Iteration 49 took 536.171 ms
 Compute
-Enqueue:  0.00312304 s
-Sync:     5.63804 s
-CPU time: 5.64117 s
-GPU time: 5.64033 s
-Iteration 0 took 3.87261 ms
-Iteration 1 took 3.90326 ms
-Iteration 2 took 3.86256 ms
-Iteration 3 took 3.91587 ms
-Iteration 4 took 3.88061 ms
-Iteration 5 took 3.88224 ms
-Iteration 6 took 3.88218 ms
-Iteration 7 took 3.91642 ms
-Iteration 8 took 3.87322 ms
-Iteration 9 took 3.9399 ms
+Enqueue:  0.0159011 s
+Sync:     22.2656 s
+CPU time: 22.2815 s
+GPU time: 22.2785 s
+Iteration 0 took 3.87712 ms
+Iteration 1 took 3.84643 ms
+Iteration 2 took 3.85021 ms
+Iteration 3 took 3.84592 ms
+Iteration 4 took 3.84611 ms
+Iteration 5 took 3.84602 ms
+Iteration 6 took 3.88131 ms
+Iteration 7 took 3.8543 ms
+Iteration 8 took 3.89565 ms
+Iteration 9 took 3.84694 ms
+Iteration 10 took 3.84698 ms
+Iteration 11 took 3.86061 ms
+Iteration 12 took 3.84557 ms
+Iteration 13 took 3.93123 ms
+Iteration 14 took 3.86602 ms
+Iteration 15 took 3.84611 ms
+Iteration 16 took 3.84582 ms
+Iteration 17 took 3.84586 ms
+Iteration 18 took 3.91338 ms
+Iteration 19 took 3.88957 ms
+Iteration 20 took 3.8703 ms
+Iteration 21 took 3.84566 ms
+Iteration 22 took 3.84589 ms
+Iteration 23 took 3.84602 ms
+Iteration 24 took 3.84598 ms
+Iteration 25 took 3.84554 ms
+Iteration 26 took 3.86448 ms
+Iteration 27 took 3.87178 ms
+Iteration 28 took 3.84595 ms
+Iteration 29 took 3.84566 ms
+Iteration 30 took 3.84618 ms
+Iteration 31 took 3.84602 ms
+Iteration 32 took 3.85453 ms
+Iteration 33 took 3.8584 ms
+Iteration 34 took 3.87021 ms
+Iteration 35 took 3.84554 ms
+Iteration 36 took 3.84608 ms
+Iteration 37 took 3.87123 ms
+Iteration 38 took 3.8585 ms
+Iteration 39 took 3.84554 ms
+Iteration 40 took 3.9112 ms
+Iteration 41 took 3.84608 ms
+Iteration 42 took 3.84566 ms
+Iteration 43 took 3.87069 ms
+Iteration 44 took 3.87133 ms
+Iteration 45 took 3.92816 ms
+Iteration 46 took 3.87757 ms
+Iteration 47 took 3.89994 ms
+Iteration 48 took 3.89661 ms
+Iteration 49 took 3.87376 ms
 Download
-Enqueue:  0.0405979 s
-Sync:     0.000192165 s
-CPU time: 0.0407901 s
-GPU time: 0.0389289 s
+Enqueue:  0.20036 s
+Sync:     0.000527859 s
+CPU time: 0.200888 s
+GPU time: 0.193172 s
 ========
 Averages
-Enqueue compute:  0.312304 ms
-Enqueue download: 4.05979 ms
-Kernel:           564.033 ms
-Download:         3.89289 ms
+Enqueue compute:  0.318022 ms
+Enqueue download: 4.0072 ms
+Kernel:           445.571 ms
+Download:         3.86343 ms
 ========
 Writing to mandelbrot_0.tga
 Writing to mandelbrot_1.tga
@@ -165,54 +528,221 @@ Writing to mandelbrot_6.tga
 Writing to mandelbrot_7.tga
 Writing to mandelbrot_8.tga
 Writing to mandelbrot_9.tga
+Writing to mandelbrot_10.tga
+Writing to mandelbrot_11.tga
+Writing to mandelbrot_12.tga
+Writing to mandelbrot_13.tga
+Writing to mandelbrot_14.tga
+Writing to mandelbrot_15.tga
+Writing to mandelbrot_16.tga
+Writing to mandelbrot_17.tga
+Writing to mandelbrot_18.tga
+Writing to mandelbrot_19.tga
+Writing to mandelbrot_20.tga
+Writing to mandelbrot_21.tga
+Writing to mandelbrot_22.tga
+Writing to mandelbrot_23.tga
+Writing to mandelbrot_24.tga
+Writing to mandelbrot_25.tga
+Writing to mandelbrot_26.tga
+Writing to mandelbrot_27.tga
+Writing to mandelbrot_28.tga
+Writing to mandelbrot_29.tga
+Writing to mandelbrot_30.tga
+Writing to mandelbrot_31.tga
+Writing to mandelbrot_32.tga
+Writing to mandelbrot_33.tga
+Writing to mandelbrot_34.tga
+Writing to mandelbrot_35.tga
+Writing to mandelbrot_36.tga
+Writing to mandelbrot_37.tga
+Writing to mandelbrot_38.tga
+Writing to mandelbrot_39.tga
+Writing to mandelbrot_40.tga
+Writing to mandelbrot_41.tga
+Writing to mandelbrot_42.tga
+Writing to mandelbrot_43.tga
+Writing to mandelbrot_44.tga
+Writing to mandelbrot_45.tga
+Writing to mandelbrot_46.tga
+Writing to mandelbrot_47.tga
+Writing to mandelbrot_48.tga
+Writing to mandelbrot_49.tga
+
+
+
+
+
+
+
 
 C++ - CUDA
 
-0x0
-0x0
-0x0
-0x0
-0x0
-0x0
-0x0
-0x0
-0x0
-Iteration 0 took 176.574 ms
-Iteration 1 took 626.565 ms
-Iteration 2 took 625.44 ms
-Iteration 3 took 623.99 ms
-Iteration 4 took 624.261 ms
-Iteration 5 took 673.866 ms
-Iteration 6 took 672.735 ms
-Iteration 7 took 672.858 ms
-Iteration 8 took 673.17 ms
-Iteration 9 took 673.641 ms
+2.85x1.9
+2.7075x1.805
+2.57212x1.71475
+2.44352x1.62901
+2.32134x1.54756
+2.20528x1.47018
+2.09501x1.39667
+1.99026x1.32684
+1.89075x1.2605
+1.79621x1.19747
+1.7064x1.1376
+1.62108x1.08072
+1.54003x1.02668
+1.46302x0.97535
+1.38987x0.926582
+1.32038x0.880253
+1.25436x0.836241
+1.19164x0.794429
+1.13206x0.754707
+1.07546x0.716972
+1.02168x0.681123
+0.970601x0.647067
+0.92207x0.614714
+0.875967x0.583978
+0.832169x0.554779
+0.79056x0.52704
+0.751032x0.500688
+0.713481x0.475654
+0.677807x0.451871
+0.643916x0.429278
+0.61172x0.407814
+0.581134x0.387423
+0.552078x0.368052
+0.524474x0.349649
+0.49825x0.332167
+0.473338x0.315558
+0.449671x0.299781
+0.427187x0.284792
+0.405828x0.270552
+0.385537x0.257024
+0.36626x0.244173
+0.347947x0.231964
+0.330549x0.220366
+0.314022x0.209348
+0.298321x0.198881
+0.283405x0.188937
+0.269235x0.17949
+0.255773x0.170515
+0.242984x0.161989
+Iteration 0 took 175.774 ms
+Iteration 1 took 186.429 ms
+Iteration 2 took 204.229 ms
+Iteration 3 took 223.743 ms
+Iteration 4 took 245.578 ms
+Iteration 5 took 281.625 ms
+Iteration 6 took 306.192 ms
+Iteration 7 took 325.049 ms
+Iteration 8 took 334.992 ms
+Iteration 9 took 348.146 ms
+Iteration 10 took 360.254 ms
+Iteration 11 took 375.684 ms
+Iteration 12 took 389.119 ms
+Iteration 13 took 397.584 ms
+Iteration 14 took 409.13 ms
+Iteration 15 took 422.035 ms
+Iteration 16 took 433.673 ms
+Iteration 17 took 447.439 ms
+Iteration 18 took 463.2 ms
+Iteration 19 took 477.111 ms
+Iteration 20 took 492.032 ms
+Iteration 21 took 507.896 ms
+Iteration 22 took 521.775 ms
+Iteration 23 took 530.852 ms
+Iteration 24 took 539.237 ms
+Iteration 25 took 547.619 ms
+Iteration 26 took 552.726 ms
+Iteration 27 took 557.068 ms
+Iteration 28 took 560.858 ms
+Iteration 29 took 566.68 ms
+Iteration 30 took 574.78 ms
+Iteration 31 took 578.159 ms
+Iteration 32 took 586.832 ms
+Iteration 33 took 592.619 ms
+Iteration 34 took 592.351 ms
+Iteration 35 took 592.828 ms
+Iteration 36 took 595.377 ms
+Iteration 37 took 595.591 ms
+Iteration 38 took 597.717 ms
+Iteration 39 took 595.038 ms
+Iteration 40 took 596.371 ms
+Iteration 41 took 594.236 ms
+Iteration 42 took 595.393 ms
+Iteration 43 took 593.221 ms
+Iteration 44 took 590.869 ms
+Iteration 45 took 589.355 ms
+Iteration 46 took 587.316 ms
+Iteration 47 took 586.557 ms
+Iteration 48 took 582.083 ms
+Iteration 49 took 578.813 ms
 Compute
-Enqueue:  0.000155926 s
-Sync:     6.04296 s
-CPU time: 6.04311 s
-GPU time: 6.0431 s
-Iteration 0 took 3.93318 ms
-Iteration 1 took 3.89392 ms
-Iteration 2 took 3.90406 ms
-Iteration 3 took 3.86659 ms
-Iteration 4 took 3.84774 ms
-Iteration 5 took 3.8296 ms
-Iteration 6 took 3.83331 ms
-Iteration 7 took 3.87206 ms
-Iteration 8 took 3.84605 ms
-Iteration 9 took 3.84902 ms
+Enqueue:  0.000668049 s
+Sync:     23.9783 s
+CPU time: 23.979 s
+GPU time: 23.9792 s
+Iteration 0 took 3.92253 ms
+Iteration 1 took 3.91603 ms
+Iteration 2 took 3.93648 ms
+Iteration 3 took 4.01504 ms
+Iteration 4 took 4.0872 ms
+Iteration 5 took 4.06186 ms
+Iteration 6 took 3.9295 ms
+Iteration 7 took 3.92717 ms
+Iteration 8 took 3.91699 ms
+Iteration 9 took 3.95152 ms
+Iteration 10 took 3.94918 ms
+Iteration 11 took 3.95702 ms
+Iteration 12 took 3.91613 ms
+Iteration 13 took 3.90701 ms
+Iteration 14 took 3.91734 ms
+Iteration 15 took 3.90899 ms
+Iteration 16 took 3.90099 ms
+Iteration 17 took 3.94131 ms
+Iteration 18 took 4.75146 ms
+Iteration 19 took 3.91274 ms
+Iteration 20 took 4.48054 ms
+Iteration 21 took 3.90099 ms
+Iteration 22 took 3.9312 ms
+Iteration 23 took 3.91376 ms
+Iteration 24 took 3.96448 ms
+Iteration 25 took 3.91056 ms
+Iteration 26 took 3.89338 ms
+Iteration 27 took 3.89686 ms
+Iteration 28 took 3.9193 ms
+Iteration 29 took 3.90534 ms
+Iteration 30 took 3.90515 ms
+Iteration 31 took 3.9111 ms
+Iteration 32 took 3.90355 ms
+Iteration 33 took 3.91219 ms
+Iteration 34 took 3.89654 ms
+Iteration 35 took 3.90166 ms
+Iteration 36 took 3.91174 ms
+Iteration 37 took 3.92518 ms
+Iteration 38 took 3.90042 ms
+Iteration 39 took 3.92448 ms
+Iteration 40 took 3.95194 ms
+Iteration 41 took 4.11344 ms
+Iteration 42 took 4.0608 ms
+Iteration 43 took 3.91773 ms
+Iteration 44 took 3.90646 ms
+Iteration 45 took 3.90448 ms
+Iteration 46 took 3.92342 ms
+Iteration 47 took 3.93184 ms
+Iteration 48 took 3.90106 ms
+Iteration 49 took 3.89818 ms
 Download
-Enqueue:  0.000139952 s
-Sync:     0.038624 s
-CPU time: 0.0387638 s
-GPU time: 0.0386756 s
+Enqueue:  0.000435829 s
+Sync:     0.198842 s
+CPU time: 0.199278 s
+GPU time: 0.198044 s
 ========
 Averages
-Enqueue compute:  0.0155926 ms
-Enqueue download: 0.0139952 ms
-Kernel:           604.31 ms
-Download:         3.86756 ms
+Enqueue compute:  0.013361 ms
+Enqueue download: 0.00871658 ms
+Kernel:           479.585 ms
+Download:         3.96089 ms
 ========
 Writing to mandelbrot_0.tga
 Writing to mandelbrot_1.tga
@@ -224,4 +754,45 @@ Writing to mandelbrot_6.tga
 Writing to mandelbrot_7.tga
 Writing to mandelbrot_8.tga
 Writing to mandelbrot_9.tga
+Writing to mandelbrot_10.tga
+Writing to mandelbrot_11.tga
+Writing to mandelbrot_12.tga
+Writing to mandelbrot_13.tga
+Writing to mandelbrot_14.tga
+Writing to mandelbrot_15.tga
+Writing to mandelbrot_16.tga
+Writing to mandelbrot_17.tga
+Writing to mandelbrot_18.tga
+Writing to mandelbrot_19.tga
+Writing to mandelbrot_20.tga
+Writing to mandelbrot_21.tga
+Writing to mandelbrot_22.tga
+Writing to mandelbrot_23.tga
+Writing to mandelbrot_24.tga
+Writing to mandelbrot_25.tga
+Writing to mandelbrot_26.tga
+Writing to mandelbrot_27.tga
+Writing to mandelbrot_28.tga
+Writing to mandelbrot_29.tga
+Writing to mandelbrot_30.tga
+Writing to mandelbrot_31.tga
+Writing to mandelbrot_32.tga
+Writing to mandelbrot_33.tga
+Writing to mandelbrot_34.tga
+Writing to mandelbrot_35.tga
+Writing to mandelbrot_36.tga
+Writing to mandelbrot_37.tga
+Writing to mandelbrot_38.tga
+Writing to mandelbrot_39.tga
+Writing to mandelbrot_40.tga
+Writing to mandelbrot_41.tga
+Writing to mandelbrot_42.tga
+Writing to mandelbrot_43.tga
+Writing to mandelbrot_44.tga
+Writing to mandelbrot_45.tga
+Writing to mandelbrot_46.tga
+Writing to mandelbrot_47.tga
+Writing to mandelbrot_48.tga
+Writing to mandelbrot_49.tga
+
 

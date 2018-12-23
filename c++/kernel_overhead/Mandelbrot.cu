@@ -195,11 +195,12 @@ int main(int argc, char* argv[]) {
     const int nx = 3*n;
     const int ny = 2*n;
     const int iterations = 5000;
-    const int num_zooms = 10;
 
-    const int x_center = -0.75 + 0.0025;
-    const int y_center = 0.1;
-    const int factor = 0.95;
+    //Set zoom parameters
+    const double x_center = -0.75 + 0.0025;
+    const double y_center = 0.1;
+    const double factor = 0.95;
+    const int num_zooms = 50;
 
     //Generate zoom locations
     std::vector<float> x0({ (float) (x_center - 1.5) });
