@@ -1,0 +1,227 @@
+PYTHON - OPENCL
+
+2.850000 x 1.900000
+2.707500 x 1.805000
+2.572125 x 1.714750
+2.443519 x 1.629012
+2.321343 x 1.547562
+2.205276 x 1.470184
+2.095012 x 1.396675
+1.990261 x 1.326841
+1.890748 x 1.260499
+Iteration 0 took 164.620576 ms
+Iteration 1 took 179.861248 ms
+Iteration 2 took 197.684064 ms
+Iteration 3 took 216.941280 ms
+Iteration 4 took 238.523872 ms
+Iteration 5 took 261.850944 ms
+Iteration 6 took 284.008768 ms
+Iteration 7 took 299.410912 ms
+Iteration 8 took 310.595008 ms
+Iteration 9 took 321.855936 ms
+Compute
+Enqueue:  0.006315 s
+Sync:     2.472781 s
+CPU time: 2.479096 s
+GPU time: 2.475353 s
+Iteration 0 took 6.064800 ms
+Iteration 1 took 5.113920 ms
+Iteration 2 took 10.468704 ms
+Iteration 3 took 10.502624 ms
+Iteration 4 took 10.278656 ms
+Iteration 5 took 10.006688 ms
+Iteration 6 took 9.589024 ms
+Iteration 7 took 9.672192 ms
+Iteration 8 took 9.352096 ms
+Iteration 9 took 9.287840 ms
+Download
+Enqueue:  0.071430 s
+Sync:     0.026221 s
+CPU time: 0.097651 s
+GPU time: 0.090337 s
+========
+Averages
+Enqueue compute:  0.631475 ms
+Enqueue download: 7.142997 ms
+Kernel:           247.535261 ms
+Download:         9.033654 ms
+========
+
+
+
+
+
+
+
+PYTHON - CUDA
+
+2.850000 x 1.900000
+2.707500 x 1.805000
+2.572125 x 1.714750
+2.443519 x 1.629012
+2.321343 x 1.547562
+2.205276 x 1.470184
+2.095012 x 1.396675
+1.990261 x 1.326841
+1.890748 x 1.260499
+Iteration 0 took 177.605148 ms
+Iteration 1 took 194.221085 ms
+Iteration 2 took 214.678299 ms
+Iteration 3 took 233.987900 ms
+Iteration 4 took 256.780548 ms
+Iteration 5 took 282.288177 ms
+Iteration 6 took 305.903229 ms
+Iteration 7 took 323.016907 ms
+Iteration 8 took 336.177704 ms
+Iteration 9 took 345.941315 ms
+Compute
+Enqueue:  0.000389 s
+Sync:     2.670456 s
+CPU time: 2.670846 s
+GPU time: 2.670600 s
+Iteration 0 took 4.229504 ms
+Iteration 1 took 3.894496 ms
+Iteration 2 took 3.899104 ms
+Iteration 3 took 3.900064 ms
+Iteration 4 took 3.899648 ms
+Iteration 5 took 3.915136 ms
+Iteration 6 took 3.939648 ms
+Iteration 7 took 3.895680 ms
+Iteration 8 took 3.902560 ms
+Iteration 9 took 3.906368 ms
+Download
+Enqueue:  0.000830 s
+Sync:     0.038877 s
+CPU time: 0.039707 s
+GPU time: 0.039382 s
+========
+Averages
+Enqueue compute:  0.038934 ms
+Enqueue download: 0.083017 ms
+Kernel:           267.060031 ms
+Download:         3.938221 ms
+========
+
+
+
+
+
+
+C++ - OPENCL
+
+0x0
+0x0
+0x0
+0x0
+0x0
+0x0
+0x0
+0x0
+0x0
+Iteration 0 took 164.693 ms
+Iteration 1 took 610.196 ms
+Iteration 2 took 609.961 ms
+Iteration 3 took 608.671 ms
+Iteration 4 took 607.809 ms
+Iteration 5 took 607.797 ms
+Iteration 6 took 607.753 ms
+Iteration 7 took 607.774 ms
+Iteration 8 took 607.82 ms
+Iteration 9 took 607.852 ms
+Compute
+Enqueue:  0.00312304 s
+Sync:     5.63804 s
+CPU time: 5.64117 s
+GPU time: 5.64033 s
+Iteration 0 took 3.87261 ms
+Iteration 1 took 3.90326 ms
+Iteration 2 took 3.86256 ms
+Iteration 3 took 3.91587 ms
+Iteration 4 took 3.88061 ms
+Iteration 5 took 3.88224 ms
+Iteration 6 took 3.88218 ms
+Iteration 7 took 3.91642 ms
+Iteration 8 took 3.87322 ms
+Iteration 9 took 3.9399 ms
+Download
+Enqueue:  0.0405979 s
+Sync:     0.000192165 s
+CPU time: 0.0407901 s
+GPU time: 0.0389289 s
+========
+Averages
+Enqueue compute:  0.312304 ms
+Enqueue download: 4.05979 ms
+Kernel:           564.033 ms
+Download:         3.89289 ms
+========
+Writing to mandelbrot_0.tga
+Writing to mandelbrot_1.tga
+Writing to mandelbrot_2.tga
+Writing to mandelbrot_3.tga
+Writing to mandelbrot_4.tga
+Writing to mandelbrot_5.tga
+Writing to mandelbrot_6.tga
+Writing to mandelbrot_7.tga
+Writing to mandelbrot_8.tga
+Writing to mandelbrot_9.tga
+
+C++ - CUDA
+
+0x0
+0x0
+0x0
+0x0
+0x0
+0x0
+0x0
+0x0
+0x0
+Iteration 0 took 176.574 ms
+Iteration 1 took 626.565 ms
+Iteration 2 took 625.44 ms
+Iteration 3 took 623.99 ms
+Iteration 4 took 624.261 ms
+Iteration 5 took 673.866 ms
+Iteration 6 took 672.735 ms
+Iteration 7 took 672.858 ms
+Iteration 8 took 673.17 ms
+Iteration 9 took 673.641 ms
+Compute
+Enqueue:  0.000155926 s
+Sync:     6.04296 s
+CPU time: 6.04311 s
+GPU time: 6.0431 s
+Iteration 0 took 3.93318 ms
+Iteration 1 took 3.89392 ms
+Iteration 2 took 3.90406 ms
+Iteration 3 took 3.86659 ms
+Iteration 4 took 3.84774 ms
+Iteration 5 took 3.8296 ms
+Iteration 6 took 3.83331 ms
+Iteration 7 took 3.87206 ms
+Iteration 8 took 3.84605 ms
+Iteration 9 took 3.84902 ms
+Download
+Enqueue:  0.000139952 s
+Sync:     0.038624 s
+CPU time: 0.0387638 s
+GPU time: 0.0386756 s
+========
+Averages
+Enqueue compute:  0.0155926 ms
+Enqueue download: 0.0139952 ms
+Kernel:           604.31 ms
+Download:         3.86756 ms
+========
+Writing to mandelbrot_0.tga
+Writing to mandelbrot_1.tga
+Writing to mandelbrot_2.tga
+Writing to mandelbrot_3.tga
+Writing to mandelbrot_4.tga
+Writing to mandelbrot_5.tga
+Writing to mandelbrot_6.tga
+Writing to mandelbrot_7.tga
+Writing to mandelbrot_8.tga
+Writing to mandelbrot_9.tga
+
