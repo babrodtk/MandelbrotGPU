@@ -1,0 +1,5 @@
+Compile:
+g++ Mandelbrot.cpp TGA.cpp -lOpenCL -std=c++11 -o mandelbrot
+
+Run:
+./mandelbrot
